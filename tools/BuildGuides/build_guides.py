@@ -73,7 +73,7 @@ def page(title, description, body, jsonld=None, path=""):
 
   <footer class="site-footer">
     Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
-    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+    Lizenz GPLv3 · <a href="https://github.com/Gecco8/sender-sortieren" target="_blank" rel="noopener">Quellcode</a> · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
   </footer>
 </body>
 </html>
