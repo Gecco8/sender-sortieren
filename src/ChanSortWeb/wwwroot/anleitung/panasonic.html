@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panasonic Senderliste bearbeiten – Viera Sender sortieren am PC</title>
+  <meta name="description" content="Panasonic-Senderliste per USB oder SD-Karte exportieren, im Browser sortieren und zurückspielen. Anleitung für Viera, Android-TV und Modelle mit Hotel-Menü.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/panasonic">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Die Sendernamen fehlen im Editor.", "acceptedAnswer": {"@type": "Answer", "text": "Bei analogen Sendern speichern manche Panasonic-Geräte keine Namen. Digitale Sender sollten Namen haben."}}, {"@type": "Question", "name": "Mein Android-Modell (vor 2022) wird nicht erkannt.", "acceptedAnswer": {"@type": "Answer", "text": "Diese Modelle speichern die Liste verschlüsselt. Sie lassen sich leider nicht bearbeiten."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Panasonic</nav>
+    <section class="guide-hero">
+      <h1>Panasonic: Sender sortieren</h1>
+      <p class="lead">Bei Panasonic gibt es besonders viele Varianten: normale Menüfunktion, Hotel-Menü oder einen Code mit vorbereitetem USB-Stick. Nicht jedes Modell lässt sich bearbeiten – unten steht, welche gehen.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Viera-Modelle ohne Android haben ein eigenes Panasonic-Menü (Startbildschirm „my Home Screen“). Android-TV-Modelle haben Google-Apps auf dem Startbildschirm. Die Serie steht in der Modellnummer, z. B. <code>TX-55<b>LX</b>700E</code>.</p>
+      <div class="picks"><a class="pick" href="#viera-neu"><b>Viera (ohne Android) – neuere Software</b><span>Panasonic-Menü mit <b>Setup</b> bzw. <b>Einstellungen</b>, z. B. Serien E, F, G, J (nicht MX/JX/LX).</span></a><a class="pick" href="#viera-alt"><b>Viera – ältere Software (Code-Methode)</b><span>Wenn es den Punkt „Senderliste austauschen“ nicht gibt.</span></a><a class="pick" href="#android-lx"><b>Android TV LS/LX 500–700 (ab 2022)</b><span>Google-Apps auf dem Startbildschirm, Modellnummer mit <code>LS5…</code>, <code>LX5…</code>, <code>LX6…</code>, <code>LX7…</code>.</span></a><a class="pick" href="#mx"><b>MX600 / MX700 / MZ800 und Fire-TV-Modelle</b><span>Modelle wie <code>TX-43MX600E</code>, <code>TX-55MX700E</code>, <code>TX-55MZ800E</code> oder Panasonic mit Fire TV.</span></a></div>
+    </section>
+    <section class="window guide-window" id="viera-neu">
+      <div class="titlebar"><h2 class="titlebar-title">Viera (ohne Android) – neuere Software</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li><b>Menü</b> › <b>Setup</b> › <b>Andere Einstellungen</b> › <b>Senderliste austauschen</b> (bzw. „Channel List Transfer“).</li><li><b>Senderliste exportieren</b> wählen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>svl.bin</code> oder <code>svl.db</code></span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="viera-alt">
+      <div class="titlebar"><h2 class="titlebar-title">Viera – ältere Software (Code-Methode)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>Auf einem USB-Stick bzw. einer SD-Karte (FAT32) eine leere Datei oder einen leeren Ordner mit dem Namen <code>hotel.pwd</code> anlegen.</li><li>Stick bzw. Karte in den Fernseher stecken – er fragt nach einem Passwort.</li><li><kbd>4850</kbd> eingeben, um die Liste auf den Stick zu kopieren.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>svl.bin</code> oder <code>svl.db</code></span></div>
+        <ul class="notes"><li>Zum Zurückspielen später <kbd>4851</kbd> eingeben.</li></ul>
+      </div>
+    </section>
+    <section class="window guide-window" id="android-lx">
+      <div class="titlebar"><h2 class="titlebar-title">Android TV LS/LX 500–700 (ab 2022)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li><b>MENU</b> › <b>Bild</b> › <b>Bildmodus</b> › <b>Benutzerdefiniert</b> › <b>Kontrast</b> wählen und dann <b>6× OK</b> drücken – ein verstecktes Menü öffnet sich.</li><li><b>Hotel Menu</b> › <b>Hotel Mode Activate</b> wählen.</li><li>Weiter unten <b>TV to USB</b> wählen.</li><li><b>Stick nicht abziehen</b>, auch wenn „Upload OK“ erscheint. Stattdessen über <b>HOME › Benachrichtigungen › USB-Gerät › Auswerfen</b> abmelden.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Ordnerstruktur mit <code>mnt/vendor/tvdata/database/tv.db</code> – im Editor den ganzen Ordner wählen.</span></div>
+        <ul class="notes"><li>Zum Zurückspielen im selben Menü <b>USB to TV</b> wählen.</li></ul>
+      </div>
+    </section>
+    <section class="window guide-window" id="mx">
+      <div class="titlebar"><h2 class="titlebar-title">MX600 / MX700 / MZ800 und Fire-TV-Modelle</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li><b>MX600 und ähnliche:</b> <b>Einstellungen</b> › <b>Installation</b> › <b>Satelliten-Einstellungen</b> › <b>Sat-Senderliste</b> › <b>Sat-Senderliste speichern</b> (nur Satellit).</li><li><b>MX700, MZ800:</b> die Senderliste über die Exportfunktion im Sendermenü speichern.</li><li><b>Fire-TV-Modelle (z. B. MXW834):</b> Export über das Sendermenü.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>.sdx</code> (MX600, Fire TV) bzw. <code>channellist.txt</code> (MX700, MZ800)</span></div>
+        <ul class="notes"><li>Der genaue Menüname weicht bei diesen Modellen stark ab – such im Handbuch nach „Senderliste speichern“ bzw. „exportieren“.</li></ul>
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>svl.bin</code> / <code>svl.db</code></td><td>Viera: direkt hochladen.</td></tr><tr><td><code>…/tv.db</code></td><td>Android LS/LX 500–700: ganzen Ordner wählen.</td></tr><tr><td><code>.sdx</code> / <code>channellist.txt</code></td><td>MX-Serien, Fire TV: direkt hochladen.</td></tr><tr><td><code>settingsDB_enc.db</code>, <code>channel_list.bin</code></td><td>JXW600 / JXW800: wird <b>nicht</b> unterstützt (verschlüsselt).</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Bearbeitete Datei an dieselbe Stelle auf dem Stick kopieren.</li><li>Gleicher Weg wie beim Export: <b>Senderliste importieren</b>, Code <kbd>4851</kbd> bzw. <b>USB to TV</b>.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>Die Sendernamen fehlen im Editor.</summary><p>Bei analogen Sendern speichern manche Panasonic-Geräte keine Namen. Digitale Sender sollten Namen haben.</p></details><details><summary>Mein Android-Modell (vor 2022) wird nicht erkannt.</summary><p>Diese Modelle speichern die Liste verschlüsselt. Sie lassen sich leider nicht bearbeiten.</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Panasonic">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a class="current" href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

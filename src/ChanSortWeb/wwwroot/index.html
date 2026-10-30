@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sender sortieren – TV-Senderliste online bearbeiten</title>
+  <meta name="description" content="TV-Senderliste online sortieren, löschen und umbenennen – für Samsung, LG, Sony, Philips, Panasonic, TCL und mehr. Deine Datei verlässt dabei nie deinen Rechner.">
+  <link rel="canonical" href="https://sender-sortieren.de/">
+  <script>
+    // Farbschema vor dem ersten Zeichnen setzen, damit nichts aufblitzt
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="app.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <header class="menubar">
+    <div class="brand">
+      <span class="app-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span>Senderlisten-Editor</span>
+    </div>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- Startbildschirm -->
+    <section id="startView" class="start">
+      <div class="hero">
+        <h1>Senderliste sortieren.<br><span class="soft">Direkt im Browser.</span></h1>
+        <p class="lead">Exportiere die Senderliste deines Fernsehers auf einen USB-Stick, öffne sie hier, bring die Sender in deine Wunschreihenfolge und spiel die Datei zurück auf den Fernseher.</p>
+      </div>
+
+      <div class="window open-window">
+        <div class="titlebar">
+          <span class="titlebar-title">Senderliste öffnen</span>
+        </div>
+        <div class="window-body">
+          <div id="dropZone" class="drop-zone" tabindex="0">
+            <div class="drop-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="44" height="44"><path d="M8 14a4 4 0 0 1 4-4h8l4 4h12a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z" fill="currentColor" opacity=".16"/><path d="M8 14a4 4 0 0 1 4-4h8l4 4h12a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 30V20m0 0l-4 4m4-4l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="drop-title">Datei oder Ordner hierher ziehen</p>
+            <p class="muted">oder</p>
+            <div class="drop-buttons">
+              <label class="btn btn-primary">Datei wählen …<input id="fileInput" type="file" multiple hidden></label>
+              <label class="btn">Ordner wählen …<input id="folderInput" type="file" webkitdirectory hidden></label>
+            </div>
+            <p class="muted small">Philips, Hisense und einige andere Marken speichern mehrere Dateien in einem Ordner.<br>Dann bitte den ganzen Ordner vom USB-Stick wählen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon blue" aria-hidden="true">🔒</div>
+          <h3>Privat</h3>
+          <p>Deine Datei wird nicht hochgeladen. Alles passiert lokal in deinem Browser.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon green" aria-hidden="true">📺</div>
+          <h3>Viele Marken</h3>
+          <p>Samsung, LG, Sony, Philips, Panasonic, TCL, Hisense, Grundig, Sharp, Toshiba und mehr.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon orange" aria-hidden="true">💾</div>
+          <h3>Sicherung</h3>
+          <p>Bewahre eine Kopie der Originaldatei auf, bevor du die geänderte Liste einspielst.</p>
+        </div>
+      </div>
+
+      <section class="start-guides">
+        <h2>So kommt die Senderliste auf den USB-Stick</h2>
+        <p class="muted">Schritt-für-Schritt-Anleitungen für deinen Fernseher:</p>
+        <nav class="guide-links" aria-label="Anleitungen nach Marke">
+          <a href="anleitung/samsung.html">Samsung</a>
+          <a href="anleitung/lg.html">LG</a>
+          <a href="anleitung/sony.html">Sony</a>
+          <a href="anleitung/philips.html">Philips</a>
+          <a href="anleitung/panasonic.html">Panasonic</a>
+          <a href="anleitung/tcl.html">TCL / Thomson</a>
+          <a href="anleitung/hisense.html">Hisense</a>
+          <a href="anleitung/grundig.html">Grundig</a>
+          <a href="anleitung/sharp.html">Sharp</a>
+          <a href="anleitung/toshiba.html">Toshiba</a>
+          <a href="anleitung/telefunken-medion.html">Telefunken, Medion &amp; Co.</a>
+          <a href="anleitung/loewe.html">Loewe</a>
+          <a href="anleitung/receiver.html">Receiver &amp; PC</a>
+        </nav>
+      </section>
+    </section>
+
+    <!-- Editor -->
+    <section id="editorView" class="editor" hidden>
+      <div class="window editor-window">
+        <div class="titlebar">
+          <span class="titlebar-title" id="fileInfo"></span>
+          <div class="titlebar-actions">
+            <a id="guideLink" class="btn" hidden target="_blank" rel="noopener" title="Anleitung zum Zurückspielen auf den Fernseher (neuer Tab)">Anleitung</a>
+            <button id="btnNew" class="btn">Andere Datei …</button>
+            <button id="btnSave" class="btn btn-primary" disabled>Speichern &amp; herunterladen</button>
+          </div>
+        </div>
+
+        <div class="editor-body">
+          <!-- Dateiliste, sichtbar sobald mehrere Dateien bzw. ein Ordner hochgeladen wurden -->
+          <aside id="filePanel" class="sidebar" hidden aria-label="Hochgeladene Dateien"></aside>
+
+          <div class="editor-main">
+            <div class="list-switcher">
+              <span class="list-switcher-label" id="tabsLabel">Senderliste</span>
+              <nav class="segmented" id="tabs" role="tablist" aria-labelledby="tabsLabel"></nav>
+            </div>
+
+            <!-- Hauptliste / Favoritenlisten der gewählten Senderliste -->
+            <div class="list-switcher sub-switcher" id="subSwitcher" hidden>
+              <span class="list-switcher-label">Ansicht</span>
+              <nav class="segmented" id="subTabs" role="tablist"></nav>
+            </div>
+
+            <div class="toolbar">
+              <div class="search">
+                <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <input id="search" type="search" placeholder="Suchen" aria-label="Sender suchen">
+              </div>
+              <div class="btn-group" id="listTools">
+                <button class="btn" data-action="top" title="An den Anfang (Pos1)">⤒ Anfang</button>
+                <button class="btn" data-action="up" title="Nach oben (Alt+↑)">↑</button>
+                <button class="btn" data-action="down" title="Nach unten (Alt+↓)">↓</button>
+                <button class="btn" data-action="bottom" title="Ans Ende (Ende)">⤓ Ende</button>
+                <button class="btn" data-action="moveTo" title="An Position verschieben (Doppelklick)">Position …</button>
+                <button class="btn" data-action="rename" title="Sender umbenennen (F2 oder Doppelklick auf den Namen)">Umbenennen …</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-danger" data-action="delete" title="Löschen (Entf)">Löschen</button>
+              </div>
+              <div class="btn-group" id="deletedTools" hidden>
+                <button class="btn" data-action="restore" title="Ausgewählte wiederherstellen">Wiederherstellen</button>
+              </div>
+              <div class="toolbar-spacer"></div>
+              <div class="btn-group">
+                <button class="btn" data-action="undo" title="Rückgängig (Strg+Z)">↶ Rückgängig</button>
+                <button id="btnShowDeleted" class="btn">Gelöschte (0)</button>
+              </div>
+            </div>
+
+            <div id="notice" class="notice" hidden></div>
+
+            <div class="table-wrap" id="tableWrap">
+              <table class="channels" id="channelTable">
+                <thead>
+                  <tr>
+                    <th class="col-nr">Nr.</th>
+                    <th class="col-old">Alt</th>
+                    <th class="col-name">Name</th>
+                    <th class="col-fav" title="Favoritenlisten: anklicken zum An- und Abwählen">Favoriten</th>
+                    <th class="col-type">Typ</th>
+                    <th class="col-enc" title="Verschlüsselt">🔒</th>
+                    <th class="col-src">Satellit / Frequenz</th>
+                    <th class="col-sid">SID</th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+              <p id="emptyHint" class="empty" hidden></p>
+            </div>
+
+            <footer class="statusbar" id="statusbar"></footer>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dialog im Stil eines macOS-Hinweisfensters -->
+  <dialog id="dialog" class="sheet">
+    <form method="dialog" id="dialogForm">
+      <div class="sheet-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <h2 id="dialogTitle"></h2>
+      <div id="dialogMessage" class="sheet-message"></div>
+      <input id="dialogInput" type="text" hidden autocomplete="off">
+      <div id="dialogButtons" class="sheet-buttons"></div>
+    </form>
+  </dialog>
+
+  <div id="overlay" class="overlay">
+    <div class="spinner" aria-hidden="true"></div>
+    <p id="overlayText">Editor wird geladen …</p>
+  </div>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="#" id="sourceLink" target="_blank" rel="noopener">Quellcode</a> ·
+    <a href="anleitung/index.html">Anleitungen</a> ·
+    <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

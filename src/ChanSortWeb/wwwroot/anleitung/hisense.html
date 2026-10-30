@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hisense Senderliste bearbeiten – Sender sortieren am PC</title>
+  <meta name="description" content="Hisense-Senderliste (VIDAA) auf USB exportieren, im Browser sortieren und zurückspielen. Mit Hinweisen zur Anbieterauswahl „Andere“.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/hisense">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Die exportierte Datei ist leer bzw. der Editor findet keine Sender.", "acceptedAnswer": {"@type": "Answer", "text": "Fast immer wurde eine Anbieterliste verwendet. Suchlauf mit Anbieter „Andere“ wiederholen und neu exportieren."}}, {"@type": "Question", "name": "Nach dem Import sehe ich nur die Antennen-Sender.", "acceptedAnswer": {"@type": "Answer", "text": "Über CH.List auf die Satellitenliste umschalten (siehe oben)."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Hisense</nav>
+    <section class="guide-hero">
+      <h1>Hisense: Senderliste bearbeiten</h1>
+      <p class="lead">Hisense-Fernseher mit VIDAA exportieren die Senderliste direkt aus dem Menü „Sender bearbeiten“. Entscheidend ist, dass bei der Sendersuche der Anbieter <b>„Andere“</b> gewählt wurde.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <div class="callout"><b>Wichtig bei Hisense:</b> Nur wenn bei der Ersteinrichtung bzw. beim Suchlauf der Anbieter <b>„Andere“</b> gewählt wurde, lässt sich die Liste exportieren und bearbeiten. Anbieterlisten wie „ASTRA_LCN“, „ORS“ oder „SKY Deutschland“ enthalten beim Export keine Senderdaten.</div>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Die meisten Hisense-Smart-TVs ab 2016 nutzen VIDAA (VIDAA U). Ältere oder einfache Modelle exportieren andere Dateien – siehe Tabelle unten.</p>
+      <div class="picks"><a class="pick" href="#vidaa"><b>VIDAA / VIDAA U (Smart-TVs ab 2016)</b><span>Hisense-Startbildschirm mit VIDAA-Logo bzw. Hisense-App-Leiste.</span></a><a class="pick" href="#aelter"><b>Ältere und einfache Modelle</b><span>Ohne VIDAA, z. B. <code>LTDN40D50TS</code>.</span></a></div>
+    </section>
+    <section class="window guide-window" id="vidaa">
+      <div class="titlebar"><h2 class="titlebar-title">VIDAA / VIDAA U (Smart-TVs ab 2016)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li><b>Einstellungen</b> (Zahnrad) › <b>Sender</b> › <b>Sender bearbeiten</b>.</li><li><b>Auf USB exportieren</b> wählen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>servicelist.db</code> (ab 2017) oder <code>channel.db</code> (2016)</span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="aelter">
+      <div class="titlebar"><h2 class="titlebar-title">Ältere und einfache Modelle</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>Export über das Sendermenü oder ein Hotel-/Servicemenü – das ist je nach Modell verschieden.</li><li>Einige Modelle nutzen dieselbe Technik wie Sharp: <a href="sharp.html">Anleitung für Sharp &amp; baugleiche Geräte</a>.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>HIS_DVB.BIN</code> oder die drei Dateien <code>HIS_FAV.BIN</code>, <code>HIS_SVL.BIN</code>, <code>HIS_TSL.BIN</code> bzw. .csv-Dateien</span></div>
+        <ul class="notes"><li>Bei mehreren Dateien den ganzen Ordner im Editor wählen.</li></ul>
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>servicelist.db</code> / <code>channel.db</code></td><td>VIDAA: direkt hochladen.</td></tr><tr><td><code>HIS_….BIN</code></td><td>Ältere Modelle: Ordner wählen.</td></tr><tr><td><code>….csv</code></td><td>Siehe <a href="sharp.html">Sharp</a>.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Bearbeitete Datei auf den Stick kopieren.</li><li><b>Sender bearbeiten</b> › <b>Von USB importieren</b>.</li><li>Danach <b>Exit</b> drücken – das offene Menü zeigt die neue Liste noch nicht an. Der Fernseher springt auf den ersten Sender der ersten Liste; zur Satellitenliste kommst du über <b>CH.List</b> › Pfeil links › OK › Liste wählen › OK.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>Die exportierte Datei ist leer bzw. der Editor findet keine Sender.</summary><p>Fast immer wurde eine Anbieterliste verwendet. Suchlauf mit Anbieter „Andere“ wiederholen und neu exportieren.</p></details><details><summary>Nach dem Import sehe ich nur die Antennen-Sender.</summary><p>Über <b>CH.List</b> auf die Satellitenliste umschalten (siehe oben).</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Hisense">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a class="current" href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

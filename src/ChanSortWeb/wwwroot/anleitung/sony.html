@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony Bravia Senderliste bearbeiten – Sender sortieren am PC</title>
+  <meta name="description" content="Sony-Bravia-Senderliste (sdb.xml) per USB exportieren, im Browser sortieren, umbenennen und Favoriten bearbeiten. Anleitung für Android TV, Google TV und KDL-Modelle.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/sony">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "„Programmlistenübertragung“ fehlt.", "acceptedAnswer": {"@type": "Answer", "text": "Der Punkt erscheint bei manchen Geräten nur, wenn gerade ein Fernsehsender (nicht eine App) läuft und ein Stick erkannt wurde."}}, {"@type": "Question", "name": "Der Export bricht ab.", "acceptedAnswer": {"@type": "Answer", "text": "Stick mit FAT32 formatieren und nur einen Stick anschließen."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Sony</nav>
+    <section class="guide-hero">
+      <h1>Sony Bravia: Sender sortieren</h1>
+      <p class="lead">Sony-Fernseher nennen die Funktion „Programmlistenübertragung“. Sie steckt etwas versteckt in den technischen Einstellungen, ist aber bei den meisten Modellen ohne Geheimcode erreichbar.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Modelle mit Android TV oder Google TV erkennst du am Startbildschirm mit Google-Apps (ab etwa 2015, Modellnummern <code>KD-…</code>, <code>XR-…</code>, <code>K-…</code>). Ältere Modelle heißen meist <code>KDL-…</code>.</p>
+      <div class="picks"><a class="pick" href="#android"><b>Android TV / Google TV</b><span>Startbildschirm mit Google-Apps, Modellnummer <code>KD-…</code>, <code>XR-…</code> oder <code>K-…</code>.</span></a><a class="pick" href="#kdl"><b>KDL-Modelle 2012–2014</b><span>Modellnummer <code>KDL-…</code>, Menü mit horizontaler Leiste.</span></a></div>
+    </section>
+    <section class="window guide-window" id="android">
+      <div class="titlebar"><h2 class="titlebar-title">Android TV / Google TV</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken. Andere USB-Geräte vorher abziehen.</li><li><b>Einstellungen</b> › <b>Fernsehen</b> bzw. <b>Kanäle</b> › <b>Kanaleinstellung</b> › <b>Digitale Einstellungen</b> › <b>Technische Einstellungen</b>.</li><li><b>Programmlistenübertragung</b> › <b>Export</b> wählen und mit OK bestätigen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>sdb.xml</code>, je nach Modell in einem Unterordner.</span></div>
+        <ul class="notes"><li>Liegen mehrere Dateien im Export, wähle im Editor einfach den ganzen Ordner.</li></ul>
+      </div>
+    </section>
+    <section class="window guide-window" id="kdl">
+      <div class="titlebar"><h2 class="titlebar-title">KDL-Modelle 2012–2014</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li><b>Home</b> › <b>Einstellungen</b> › <b>Digitale Einstellungen</b> › <b>Programmlistenübertragung</b>.</li><li><b>Export</b> wählen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>sdb.xml</code></span></div>
+        
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>sdb.xml</code></td><td>Direkt hochladen.</td></tr><tr><td>mehrere Dateien bzw. Ordner</td><td>Den ganzen Ordner wählen – der Editor findet die richtige Datei.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Bearbeitete <code>sdb.xml</code> an dieselbe Stelle auf dem Stick kopieren.</li><li>Gleicher Menüweg, dann <b>Import</b> wählen.</li><li>Wird die neue Liste nicht angezeigt: Fernseher neu starten, dazu die Power-Taste der Fernbedienung etwa 5 Sekunden gedrückt halten.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>„Programmlistenübertragung“ fehlt.</summary><p>Der Punkt erscheint bei manchen Geräten nur, wenn gerade ein Fernsehsender (nicht eine App) läuft und ein Stick erkannt wurde.</p></details><details><summary>Der Export bricht ab.</summary><p>Stick mit FAT32 formatieren und nur einen Stick anschließen.</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Sony">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a class="current" href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

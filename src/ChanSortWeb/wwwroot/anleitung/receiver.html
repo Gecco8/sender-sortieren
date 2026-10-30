@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Senderliste für Sat-Receiver bearbeiten – Enigma2, VDR, SAT&gt;IP</title>
+  <meta name="description" content="Senderlisten von Enigma2-Receivern (Dreambox, VU+), VDR, SAT&gt;IP (.m3u), Xoro, Strong, TechniSat-Receivern und weiteren im Browser sortieren.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/receiver">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Receiver &amp; PC</nav>
+    <section class="guide-hero">
+      <h1>Sat-Receiver &amp; PC-Software</h1>
+      <p class="lead">Neben Fernsehern unterstützt der Editor auch die Senderlisten vieler Receiver und PC-Programme.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      
+      <div class="picks"><a class="pick" href="#enigma2"><b>Enigma2 (Dreambox, VU+, Gigablue …)</b><span>Linux-Receiver mit Enigma2-Oberfläche.</span></a><a class="pick" href="#weitere"><b>Weitere Receiver und Programme</b></a></div>
+    </section>
+    <section class="window guide-window" id="enigma2">
+      <div class="titlebar"><h2 class="titlebar-title">Enigma2 (Dreambox, VU+, Gigablue …)</h2></div>
+      <div class="window-body">
+        
+        <ol class="steps"><li>Per FTP (z. B. mit FileZilla) auf den Receiver verbinden und aus <code>/etc/enigma2/</code> die Dateien <code>lamedb</code>, <code>bouquets.*</code> und <code>userbouquet.*</code> auf den PC kopieren.</li><li>Im Editor den Ordner mit diesen Dateien wählen.</li><li>Nach dem Speichern die Dateien zurückkopieren und den Receiver neu starten bzw. die Senderlisten neu laden.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>lamedb</code>, <code>bouquets.tv</code>, <code>userbouquet.*.tv</code> …</span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="weitere">
+      <div class="titlebar"><h2 class="titlebar-title">Weitere Receiver und Programme</h2></div>
+      <div class="window-body">
+        
+        <ol class="steps"><li><b>VDR</b> (Linux Video Disk Recorder): <code>channels.conf</code></li><li><b>SAT>IP</b>: <code>.m3u</code>-Listen mit Sendernamen und Programmnummern</li><li><b>Xoro, Strong, TechniSat</b> und baugleiche Receiver: <code>.dbm</code>-Dateien</li><li><b>VISION EDGE 4K</b>: <code>database.db</code></li><li><b>DVBViewer</b>: Senderliste als <code>.ini</code></li></ol>
+        
+        
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Die gespeicherte Datei an denselben Ort zurückkopieren, von dem du sie geholt hast.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Receiver%20&%20PC">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a class="current" href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

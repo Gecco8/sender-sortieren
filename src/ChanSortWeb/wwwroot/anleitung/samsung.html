@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samsung Sender sortieren am PC – Senderliste bearbeiten</title>
+  <meta name="description" content="Samsung-Senderliste auf USB exportieren, im Browser sortieren, löschen und umbenennen und zurück auf den Fernseher spielen. Anleitung für alle Serien von 2010 bis heute.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/samsung">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "„Senderliste übertragen“ ist ausgegraut oder fehlt.", "acceptedAnswer": {"@type": "Answer", "text": "Meist steckt kein (erkannter) USB-Stick – FAT32 formatieren und einen Stick bis 32 GB verwenden. Bei Listen, die ein Kabel- oder Sat-Anbieter vorgibt, kann die Funktion außerdem gesperrt sein; dann hilft ein Sendersuchlauf ohne Anbieterauswahl."}}, {"@type": "Question", "name": "Die PIN 0000 funktioniert nicht.", "acceptedAnswer": {"@type": "Answer", "text": "Dann wurde die PIN geändert. Sie lässt sich unter Einstellungen › Allgemein › Systemmanager › PIN ändern neu setzen."}}, {"@type": "Question", "name": "Nach dem Import ist die Reihenfolge wieder durcheinander.", "acceptedAnswer": {"@type": "Answer", "text": "Prüfe, ob der Fernseher automatisch nach Sendern sucht (z. B. Automatische Senderaktualisierung bzw. Senderlisten-Update des Anbieters) und schalte das aus."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Samsung</nav>
+    <section class="guide-hero">
+      <h1>Samsung: Sender sortieren am PC</h1>
+      <p class="lead">Samsung-Fernseher können die Senderliste seit 2010 über das normale Menü auf einen USB-Stick kopieren. Welcher Menüweg gilt, hängt vom Baujahr ab – das findest du am schnellsten über die Modellnummer.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Die Modellnummer steht auf dem Typenschild hinten am Gerät oder unter <b>Einstellungen › Support › Über dieses TV-Gerät</b>. Die Buchstaben nach der Zollzahl verraten das Baujahr: <code>GU55<b>TU</b>7079</code> = 2020, <code>UE40<b>F</b>6400</code> = 2013, <code>GQ65Q60<b>B</b></code> = 2022.</p>
+      <div class="picks"><a class="pick" href="#tizen"><b>Ab 2016 (Tizen)</b><span>Modellnummer mit KU, MU, NU, RU, TU, AU, BU, CU, DU … bzw. QLED/Neo QLED mit Endbuchstabe R, T, A, B, C, D. Startbildschirm mit App-Leiste am unteren Rand.</span></a><a class="pick" href="#2010-2015"><b>2010 bis 2015 (Serien C, D, E, F, H, J)</b><span>Modellnummer mit C, D, E, F, H oder J nach der Zollzahl, z. B. <code>UE46<b>F</b>6470</code>. Menü über die Taste <b>MENU</b>.</span></a><a class="pick" href="#2009"><b>2009 (B-Serie)</b><span>Modellnummer mit B nach der Zollzahl, z. B. <code>LE40<b>B</b>650</code>.</span></a></div>
+    </section>
+    <section class="window guide-window" id="tizen">
+      <div class="titlebar"><h2 class="titlebar-title">Ab 2016 (Tizen)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick (FAT32, am besten leer) an den Fernseher stecken.</li><li><b>Home</b> › <b>Einstellungen</b> (ggf. <b>Alle Einstellungen</b>) › <b>Übertragung</b> bzw. <b>Senderempfang</b> › <b>Experteneinstellungen</b>.</li><li><b>Senderliste übertragen</b> wählen und die PIN eingeben – ab Werk <kbd>0000</kbd>.</li><li><b>Auf USB exportieren</b> wählen und die Meldung mit OK bestätigen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Eine <code>.zip</code>-Datei, deren Name das Modell enthält, z. B. <code>channel_list_GU55TU7079_1201.zip</code>. <b>Nicht entpacken</b> – lade die .zip-Datei direkt hoch.</span></div>
+        <ul class="notes"><li>Bei manchen Geräten heißt der Weg <b>Sendereinstellungen › Experteneinstellungen</b>.</li></ul>
+      </div>
+    </section>
+    <section class="window guide-window" id="2010-2015">
+      <div class="titlebar"><h2 class="titlebar-title">2010 bis 2015 (Serien C, D, E, F, H, J)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li><b>MENU</b> › <b>Senderempfang</b> bzw. <b>Sender</b> (2011/2012) › <b>Sendereinstellungen</b>.</li><li><b>Senderliste übertragen</b> wählen, PIN <kbd>0000</kbd> eingeben.</li><li><b>Auf USB exportieren</b> wählen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Eine <code>.scm</code>-Datei (Serien C bis H), bei der J-Serie meist eine <code>.zip</code>. Der Name ist fest vorgegeben; ein vorhandener Export wird ohne Nachfrage überschrieben.</span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="2009">
+      <div class="titlebar"><h2 class="titlebar-title">2009 (B-Serie)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>Fernseher einschalten, einmal <b>Lautstärke leiser</b> drücken.</li><li>Die Taste <b>Enter</b> etwa 10 Sekunden gedrückt halten – ein verstecktes Menü öffnet sich.</li><li>Dort die Senderliste auf den USB-Stick kopieren.</li><li>Klappt es nicht: im Tonmenü <b>TV-Lautsprecher</b> wählen und <b>Anynet+ (HDMI-CEC)</b> ausschalten.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Ein Ordner mit mehreren Dateien. Diese Dateien (ohne Unterordner) in ein Zip-Archiv packen und die Endung von <code>.zip</code> in <code>.scm</code> ändern; zum Zurückspielen wieder entpacken.</span></div>
+        <ul class="notes"><li>Das <code>clone.bin</code>-Format mancher B-Modelle wird nicht unterstützt.</li><li>In der Liste „Air Analog“ sind nicht alle Funktionen verfügbar.</li></ul>
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>channel_list_….zip</code></td><td>Ab 2015/2016: direkt hochladen, nicht entpacken.</td></tr><tr><td><code>channel_list_….scm</code></td><td>2010–2014: direkt hochladen.</td></tr><tr><td><code>clone.bin</code></td><td>Wird nicht unterstützt.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Gespeicherte Datei aus dem Editor auf den Stick kopieren. <b>Den Dateinamen nicht ändern</b> – der Fernseher sucht genau diesen Namen.</li><li>Gleicher Menüweg wie beim Export, dann <b>Von USB importieren</b> wählen.</li><li>Nach dem Import startet der Fernseher eventuell neu. Das ist normal.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>„Senderliste übertragen“ ist ausgegraut oder fehlt.</summary><p>Meist steckt kein (erkannter) USB-Stick – FAT32 formatieren und einen Stick bis 32 GB verwenden. Bei Listen, die ein Kabel- oder Sat-Anbieter vorgibt, kann die Funktion außerdem gesperrt sein; dann hilft ein Sendersuchlauf ohne Anbieterauswahl.</p></details><details><summary>Die PIN 0000 funktioniert nicht.</summary><p>Dann wurde die PIN geändert. Sie lässt sich unter <b>Einstellungen › Allgemein › Systemmanager › PIN ändern</b> neu setzen.</p></details><details><summary>Nach dem Import ist die Reihenfolge wieder durcheinander.</summary><p>Prüfe, ob der Fernseher automatisch nach Sendern sucht (z. B. <b>Automatische Senderaktualisierung</b> bzw. Senderlisten-Update des Anbieters) und schalte das aus.</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Samsung">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a class="current" href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

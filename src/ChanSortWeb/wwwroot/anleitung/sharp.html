@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sharp Senderliste bearbeiten – auch Blaupunkt, Dyon, Changhong</title>
+  <meta name="description" content="Senderliste bei Sharp, Blaupunkt, Dyon, Changhong, alphatronics und JTC Genesis per USB exportieren (auch über Hotel- und Servicemenü) und im Browser sortieren.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/sharp">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welche Datei soll ich hochladen?", "acceptedAnswer": {"@type": "Answer", "text": "Am einfachsten den ganzen Ordner – der Editor sucht sich die passenden Dateien selbst."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Sharp</nav>
+    <section class="guide-hero">
+      <h1>Sharp &amp; baugleiche Geräte</h1>
+      <p class="lead">Viele Fernseher von Sharp, Blaupunkt, Dyon, Changhong, alphatronics, JTC Genesis sowie einige Hisense- und Grundig-Modelle haben dieselbe Technik. Sie exportieren .csv-Dateien plus eine oder mehrere Datendateien.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Typische Modelle: Sharp <code>LC-xxCFE4142E</code>, <code>LC-xxUI7552E</code>, <code>xxBJ1E</code>/<code>xxBJ3E</code>/<code>xxBJ5E</code>; Blaupunkt <code>B40A148TCSFHD</code>; Changhong <code>LED32E2200ST2</code>; Dyon <code>Live 22 Pro</code>, <code>ENTER 32 Pro X</code>; Grundig <code>24 GHB 5944</code>.</p>
+      <div class="picks"><a class="pick" href="#menue"><b>Export im normalen Menü</b><span>Viele Modelle haben im Sender- bzw. Installationsmenü einen Punkt zum Export auf USB.</span></a><a class="pick" href="#geheim"><b>Export im Hotel- oder Servicemenü</b><span>Wenn im normalen Menü kein Export zu finden ist.</span></a></div>
+    </section>
+    <section class="window guide-window" id="menue">
+      <div class="titlebar"><h2 class="titlebar-title">Export im normalen Menü</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li>Im Menü <b>Sender</b> bzw. <b>Installation</b> nach <b>Export</b>, <b>Senderliste kopieren</b> oder <b>USB</b> suchen.</li><li>Export starten. Sharp Aquos <code>xxBJ1E</code> und ähnliche haben dafür ein eigenes Untermenü.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Siehe Tabelle unten.</span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="geheim">
+      <div class="titlebar"><h2 class="titlebar-title">Export im Hotel- oder Servicemenü</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li><b>Hotelmenü</b>: <kbd>MENU</kbd> und dann <kbd>7906</kbd> – oder <kbd>MENU</kbd> <kbd>4588</kbd>.</li><li><b>Servicemenü</b>: <kbd>MENU</kbd> <kbd>1147</kbd>, <kbd>MENU</kbd> <kbd>11471147</kbd> oder <kbd>SOURCE</kbd> <kbd>2580</kbd>.</li><li>Dort nur die Import-/Export-Funktion verwenden.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Siehe Tabelle unten.</span></div>
+        <ul class="notes"><li><b>Ändere im Servicemenü keine anderen Werte</b> – das kann den Fernseher beschädigen.</li></ul>
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>DVBS_Program.csv</code> + <code>cvt_database.dat</code></td><td>Ordner wählen.</td></tr><tr><td><code>DVBS_CHANNEL_TABLE.csv</code> + <code>dtv_cmdb….bin</code></td><td>Ordner wählen.</td></tr><tr><td><code>MS…_DVBS_CHANNEL_TABLE.csv</code> + <code>MS…_HOTELMODE_TABLE.json</code></td><td>Ordner wählen.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Alle Dateien wieder auf den Stick kopieren – bei manchen Modellen (z. B. Sharp <code>xxBJ1E</code>) sind <b>alle vier Dateien</b> für den Import nötig.</li><li>Im selben Menü den Import starten.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>Welche Datei soll ich hochladen?</summary><p>Am einfachsten den ganzen Ordner – der Editor sucht sich die passenden Dateien selbst.</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Sharp">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a class="current" href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

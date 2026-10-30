@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LG Senderliste bearbeiten und Sender sortieren am PC</title>
+  <meta name="description" content="LG-Senderliste (GlobalClone00001.TLL) auf USB kopieren, im Browser sortieren, löschen und Favoriten setzen. Anleitung für webOS und ältere NetCast-Modelle.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/lg">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Nach dem Import springen Sender wieder an andere Plätze.", "acceptedAnswer": {"@type": "Answer", "text": "Das passiert fast immer bei vorsortierten Anbieterlisten. Sendersuchlauf mit Anbieter „Andere“ bzw. „Keiner“ wiederholen, neu exportieren und erneut sortieren."}}, {"@type": "Question", "name": "Der Editor meldet „Program #0 assigned to multiple channels“.", "acceptedAnswer": {"@type": "Answer", "text": "Der Hinweis betrifft gelöschte Sender und ist harmlos – das Desktop-Programm ChanSort meldet ihn genauso."}}, {"@type": "Question", "name": "Im Menü fehlt „Sender kopieren“.", "acceptedAnswer": {"@type": "Answer", "text": "Hotel-Menü über langes Drücken der Einstellungstaste und 1105 probieren (siehe oben). Bei manchen Modellen ist die Funktion nur dort zu finden."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › LG</nav>
+    <section class="guide-hero">
+      <h1>LG: Senderliste bearbeiten</h1>
+      <p class="lead">Bei LG hängt der Weg vom Betriebssystem ab: Neuere Geräte mit webOS kopieren die Senderliste über das normale Menü, ältere NetCast-Geräte nur über ein verstecktes Menü. Wichtig ist bei LG außerdem, wie die Sender ursprünglich gesucht wurden – siehe Hinweis unten.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <div class="callout"><b>Wichtig bei LG:</b> Die Liste lässt sich nur zuverlässig bearbeiten, wenn bei der Sendersuche <b>kein Anbieter</b> ausgewählt wurde (also „Keiner“, „Andere“ oder „Alle“ bzw. Blindsuche statt z. B. „Astra 19.2 Liste“ oder einem Kabelanbieter). Lade außerdem keine Listen von anderen Modellen oder älteren Software-Ständen und mache nach einem Software-Update erst einen neuen Suchlauf.</div>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Die webOS-Version steht unter <b>Einstellungen › Allgemein › Über dieses TV-Gerät</b> (bzw. <b>Softwareversion</b>). Grobe Faustregel über die Modellnummer: <code>…UN…</code> = 2020, <code>…UP…</code> = 2021, <code>…UQ…</code> = 2022, <code>…UR…</code> = 2023; bei OLED steht die Ziffer am Ende für das Jahr (<code>OLED55C<b>1</b></code> = 2021).</p>
+      <div class="picks"><a class="pick" href="#webos-neu"><b>webOS 22 und neuer (ab 2022)</b><span>Startbildschirm mit großen Kacheln; im Einstellungsmenü gibt es den Bereich <b>Allgemein</b> mit dem Unterpunkt <b>Sender</b> bzw. <b>Programme</b>.</span></a><a class="pick" href="#webos"><b>webOS 1 bis 6 (ca. 2014–2021)</b><span>Leiste mit App-Kacheln am unteren Bildschirmrand. Im Einstellungsmenü gibt es einen eigenen Bereich <b>Sender</b> bzw. <b>Programme</b>.</span></a><a class="pick" href="#netcast"><b>NetCast (bis ca. 2013)</b><span>Ältere Menüoptik ohne App-Leiste, Modellnummern wie <code>…LA…</code>, <code>…LN…</code>, <code>…LM…</code>, <code>…LS…</code>, <code>…CS…</code>, <code>…PM…</code> oder älter.</span></a></div>
+    </section>
+    <section class="window guide-window" id="webos-neu">
+      <div class="titlebar"><h2 class="titlebar-title">webOS 22 und neuer (ab 2022)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken (FAT32).</li><li><b>Einstellungen</b> (Zahnrad) › <b>Alle Einstellungen</b> › <b>Allgemein</b> › <b>Sender</b> (bzw. <b>Programme</b>).</li><li><b>Sender kopieren</b> (bzw. <b>Programme kopieren</b>) › <b>TV auf USB</b> wählen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>GlobalClone00001.TLL</code></span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="webos">
+      <div class="titlebar"><h2 class="titlebar-title">webOS 1 bis 6 (ca. 2014–2021)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li><b>Einstellungen</b> › <b>Alle Einstellungen</b> › <b>Sender</b> (bzw. <b>Programme</b>), ggf. › <b>Sendereinstellungen</b>.</li><li><b>Sender kopieren</b> › <b>TV auf USB</b>.</li><li>Fehlt der Punkt: Taste <b>Einstellungen</b> gedrückt halten, bis das Menü verschwindet und die Senderinfo erscheint, dann schnell <kbd>1105</kbd> + OK. Im Hotel-Menü gibt es die Kopierfunktion ebenfalls.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>GlobalClone00001.TLL</code>. Manche Modelle von 2014/2015 schreiben zusätzlich eine Datei wie <code>xxLB….TLL</code>.</span></div>
+        <ul class="notes"><li>Liegen beide Dateien auf dem Stick, liest der Fernseher beim Import nur die modellspezifische Datei. Bearbeite in diesem Fall diese Datei – oder lösche sie und bearbeite die GlobalClone-Datei.</li></ul>
+      </div>
+    </section>
+    <section class="window guide-window" id="netcast">
+      <div class="titlebar"><h2 class="titlebar-title">NetCast (bis ca. 2013)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li>Taste <b>Settings</b> bzw. <b>Menu/Home</b> gedrückt halten, bis das Menü wieder verschwindet.</li><li>Solange noch die Senderinfo zu sehen ist, schnell <kbd>1105</kbd> + OK eingeben.</li><li>Im versteckten Menü <b>TV Link Loader</b> bzw. <b>USB Cloning</b> wählen und auf USB exportieren. Die vorgeschlagene Nummer <code>0001</code> kann bleiben.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Eine Datei wie <code>xxLM620S-ZE00001.TLL</code> (Modellname im Dateinamen).</span></div>
+        <ul class="notes"><li>Bei Modellen von 2012/2013 mit sehr alter Software reicht die normale Fernbedienung nicht – dann ist eine programmierbare Universalfernbedienung nötig (z. B. Logitech Harmony mit Gerät „LG 26LE5300-UE“, Taste „In-Start“).</li><li>Einige Modelle (z. B. xxLM640T) können wegen Fehlern in der Software nicht bearbeitet werden. Bei <code>…LP…</code>-Modellen werden nur Satellitensender unterstützt.</li></ul>
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>GlobalClone00001.TLL</code></td><td>webOS: direkt hochladen.</td></tr><tr><td><code>xx<i>Modell</i>….TLL</code></td><td>NetCast bzw. manche webOS-Geräte 2014/2015: direkt hochladen.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Bearbeitete Datei unter gleichem Namen auf den Stick kopieren.</li><li>Gleicher Menüweg wie beim Export, dann <b>USB auf TV</b> wählen.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>Nach dem Import springen Sender wieder an andere Plätze.</summary><p>Das passiert fast immer bei vorsortierten Anbieterlisten. Sendersuchlauf mit Anbieter „Andere“ bzw. „Keiner“ wiederholen, neu exportieren und erneut sortieren.</p></details><details><summary>Der Editor meldet „Program #0 assigned to multiple channels“.</summary><p>Der Hinweis betrifft gelöschte Sender und ist harmlos – das Desktop-Programm ChanSort meldet ihn genauso.</p></details><details><summary>Im Menü fehlt „Sender kopieren“.</summary><p>Hotel-Menü über langes Drücken der Einstellungstaste und <kbd>1105</kbd> probieren (siehe oben). Bei manchen Modellen ist die Funktion nur dort zu finden.</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20LG">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a class="current" href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

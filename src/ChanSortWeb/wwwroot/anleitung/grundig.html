@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grundig Senderliste bearbeiten – Sender sortieren am PC</title>
+  <meta name="description" content="Grundig-Senderliste per USB exportieren und im Browser sortieren. Welche Grundig-Modelle unterstützt werden und wo der Export im Menü steckt.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/grundig">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mein Grundig mit Fire TV / Google TV bietet keinen Export an.", "acceptedAnswer": {"@type": "Answer", "text": "Bei diesen Modellen ist uns kein allgemeiner Exportweg bekannt. Wenn du einen findest, schreib uns – wir ergänzen die Anleitung."}}]}</script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Grundig</nav>
+    <section class="guide-hero">
+      <h1>Grundig: Sender sortieren</h1>
+      <p class="lead">Grundig hat über die Jahre unterschiedliche Technik verbaut. Ob und wie der Export geht, hängt deshalb stark vom Modell ab. Am schnellsten erkennst du es an den Dateien, die der Fernseher auf den Stick schreibt.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Such im Menü nach „Senderliste“, „Programmliste“ oder „USB“ – bei vielen Modellen gibt es einen Punkt <b>Senderliste exportieren</b>. Andernfalls hilft das Handbuch deines Modells (Suchbegriff „USB“).</p>
+      <div class="picks"><a class="pick" href="#xml"><b>Modelle mit dvb…_config.xml</b><span>Der Export schreibt Dateien wie <code>dvbs_config.xml</code>, <code>dvbc_config.xml</code> oder <code>dvbt_config.xml</code>.</span></a><a class="pick" href="#cmdb"><b>Modelle mit …_cmdb_….bin oder cvt_database.dat</b><span>Der Export schreibt mehrere <code>.bin</code>-Dateien bzw. <code>cvt_database.dat</code> und eine .csv-Datei (z. B. <code>24 GHB 5944</code>).</span></a></div>
+    </section>
+    <section class="window guide-window" id="xml">
+      <div class="titlebar"><h2 class="titlebar-title">Modelle mit dvb…_config.xml</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken (FAT32).</li><li><b>Menü</b> › <b>Einstellungen</b> bzw. <b>Installation</b> › <b>Senderliste</b> › <b>Senderliste exportieren</b> (Bezeichnung je nach Modell).</li><li>Den Stick als Ziel wählen und warten, bis der Export fertig ist.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>dvb…_config.xml</code> – direkt hochladen.</span></div>
+        
+      </div>
+    </section>
+    <section class="window guide-window" id="cmdb">
+      <div class="titlebar"><h2 class="titlebar-title">Modelle mit …_cmdb_….bin oder cvt_database.dat</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>Export über das normale Menü oder ein Hotel-/Servicemenü – diese Geräte sind technisch baugleich mit Sharp und anderen Marken.</li><li>Alle Schritte und Tastencodes: <a href="sharp.html">Anleitung für Sharp &amp; baugleiche Geräte</a>.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Mehrere Dateien – im Editor den ganzen Ordner wählen.</span></div>
+        
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>dvb…_config.xml</code></td><td>Direkt hochladen.</td></tr><tr><td><code>…_cmdb_….bin</code></td><td>Ordner wählen.</td></tr><tr><td><code>cvt_database.dat</code> + <code>….csv</code></td><td>Ordner wählen, siehe <a href="sharp.html">Sharp</a>.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Bearbeitete Dateien unter gleichem Namen auf den Stick kopieren.</li><li>Im selben Menü <b>Senderliste importieren</b> wählen.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="guide-section">
+      <h2>Häufige Probleme</h2>
+      <div class="faq"><details><summary>Mein Grundig mit Fire TV / Google TV bietet keinen Export an.</summary><p>Bei diesen Modellen ist uns kein allgemeiner Exportweg bekannt. Wenn du einen findest, schreib uns – wir ergänzen die Anleitung.</p></details></div>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Grundig">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a class="current" href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>

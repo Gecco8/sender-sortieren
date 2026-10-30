@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toshiba Senderliste bearbeiten – Sender sortieren am PC</title>
+  <meta name="description" content="Toshiba-Senderliste auf USB exportieren und im Browser sortieren. Für neuere Modelle (Sat-Senderliste) und ältere Modelle mit verstecktem Menü.">
+  <link rel="canonical" href="https://sender-sortieren.de/anleitung/toshiba">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch { }
+  </script>
+  <link rel="stylesheet" href="../app.css">
+  <link rel="stylesheet" href="../guide.css">
+  <script src="../guide.js" defer></script>
+</head>
+<body>
+  <header class="menubar">
+    <a class="brand" href="../index.html">
+      <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="5" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 9h6M7 12.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span>Senderlisten-Editor</span>
+    </a>
+    <nav class="menubar-nav">
+      <a href="index.html">Anleitungen</a>
+    </nav>
+    <div class="menubar-actions">
+      <label class="theme-switch" title="Hell / Dunkel umschalten">
+        <span class="theme-icon sun" aria-hidden="true">☀︎</span>
+        <input type="checkbox" id="themeToggle" role="switch" aria-label="Dunkler Modus">
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="theme-icon moon" aria-hidden="true">☾</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="crumbs"><a href="../index.html">Start</a> › <a href="index.html">Anleitungen</a> › Toshiba</nav>
+    <section class="guide-hero">
+      <h1>Toshiba: Sender sortieren</h1>
+      <p class="lead">Neuere Toshiba-Fernseher nutzen dieselbe Technik wie Telefunken und Medion. Ältere Modelle haben ein verstecktes Menü, das über die Tasten am Gerät geöffnet wird.</p>
+      <div class="hero-actions"><a class="btn btn-primary btn-large" href="../index.html">Senderliste jetzt öffnen</a><a class="btn btn-large" href="#geraet">Zur Anleitung</a></div>
+    </section>
+    <ol class="flow">
+      <li><span class="flow-nr">1</span><b>Exportieren</b><span>Senderliste am Fernseher auf einen USB-Stick kopieren</span></li>
+      <li><span class="flow-nr">2</span><b>Öffnen</b><span>Datei oder Ordner hier im Browser laden</span></li>
+      <li><span class="flow-nr">3</span><b>Bearbeiten</b><span>Sortieren, löschen, umbenennen, Favoriten</span></li>
+      <li><span class="flow-nr">4</span><b>Zurückspielen</b><span>Gespeicherte Datei auf den Stick und importieren</span></li>
+    </ol>
+    <section id="geraet" class="guide-section">
+      <h2>Welches Gerät hast du?</h2>
+      <p class="muted">Ab etwa 2017 gibt es im Installationsmenü den Punkt <b>Satelliten-Einstellungen</b>. Ältere Modelle haben Modellnummern mit RL, SL, TL, UL, VL, WL, XL oder YL (Serien 8xx/9xx).</p>
+      <div class="picks"><a class="pick" href="#neu"><b>Ab ca. 2017</b><span>Menü mit <b>Installation › Satelliten-Einstellungen</b>.</span></a><a class="pick" href="#alt"><b>Ältere Modelle (Serien 8xx/9xx)</b><span>Modellnummern mit RL, SL, TL, UL, VL, WL, XL oder YL.</span></a></div>
+    </section>
+    <section class="window guide-window" id="neu">
+      <div class="titlebar"><h2 class="titlebar-title">Ab ca. 2017</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>USB-Stick einstecken.</li><li><b>Menü</b> › <b>Einstellungen</b> › <b>Installation</b> › <b>Satelliten-Einstellungen</b> › <b>Sat-Senderliste</b>.</li><li><b>Sat-Senderliste speichern</b> wählen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span><code>.sdx</code> (nur Satellitensender). Manche Modelle schreiben stattdessen eine <code>settingsDB.db</code>.</span></div>
+        <ul class="notes"><li>Mehr dazu: <a href="telefunken-medion.html">Telefunken, Medion &amp; baugleiche Geräte</a>.</li></ul>
+      </div>
+    </section>
+    <section class="window guide-window" id="alt">
+      <div class="titlebar"><h2 class="titlebar-title">Ältere Modelle (Serien 8xx/9xx)</h2></div>
+      <div class="window-body">
+        <h3>Export auf USB</h3>
+        <ol class="steps"><li>Fernseher einschalten und einen (am besten leeren) USB-Stick einstecken. Die Frage „Mediaplayer starten?“ mit <b>Nein</b> beantworten.</li><li>Auf der Fernbedienung einmal <b>Stumm</b> drücken und loslassen.</li><li>Dann <b>Stumm</b> gedrückt halten und gleichzeitig am <b>Fernseher selbst</b> (nicht auf der Fernbedienung) die Taste <b>Pfeil nach unten</b> drücken.</li><li>Im Menü <b>TV to USB</b> wählen. Danach <b>Exit</b> drücken und den Stick abziehen.</li></ol>
+        <div class="stick"><span class="stick-label">Auf dem Stick</span><span>Eine <code>.zip</code> mit <code>chmgt.db</code>, <code>dvbSysData.db</code> und <code>dvbMainData.db</code> – direkt hochladen.</span></div>
+        <ul class="notes"><li>Daten auf dem Stick können dabei gelöscht werden.</li></ul>
+      </div>
+    </section>
+    <section class="guide-section">
+      <h2>Was liegt auf dem Stick?</h2>
+      <p class="muted">Unsicher? Wähle im Editor einfach den ganzen Ordner vom Stick – das Format wird automatisch erkannt.</p>
+      <table class="files"><thead><tr><th>Datei</th><th>Was tun?</th></tr></thead><tbody><tr><td><code>….sdx</code></td><td>Neuere Modelle: direkt hochladen.</td></tr><tr><td><code>settingsDB.db</code></td><td>Direkt hochladen.</td></tr><tr><td><code>….zip</code> mit chmgt.db</td><td>Ältere Modelle: direkt hochladen.</td></tr></tbody></table>
+    </section>
+    <section class="guide-section">
+      <h2>Zurück auf den Fernseher</h2>
+      <ol class="steps"><li>Bearbeitete Datei auf den Stick kopieren.</li><li>Neuere Modelle: <b>Sat-Senderliste laden</b>. Ältere: im versteckten Menü <b>USB to TV</b>.</li></ol>
+      <p class="muted small">Tipp: Bewahre eine Kopie der Originaldatei auf. Dann kannst du jederzeit zum alten Stand zurück.</p>
+    </section>
+    <section class="feedback">
+      <div>
+        <b>Hat es bei dir so geklappt?</b>
+        <span>Menünamen unterscheiden sich je nach Modell und Software-Stand. Wenn es bei deinem Gerät anders heißt, schreib uns kurz Modell und Menüweg – wir ergänzen die Anleitung.</span>
+      </div>
+      <a class="btn" href="mailto:kontakt@sender-sortieren.de?subject=Anleitung%20Toshiba">Rückmeldung senden</a>
+    </section>
+    <section class="guide-section">
+      <h2>Andere Marken</h2>
+      <nav class="brand-grid" aria-label="Weitere Marken"><a href="samsung.html">Samsung</a><a href="lg.html">LG</a><a href="sony.html">Sony</a><a href="philips.html">Philips</a><a href="panasonic.html">Panasonic</a><a href="tcl.html">TCL / Thomson</a><a href="hisense.html">Hisense</a><a href="grundig.html">Grundig</a><a href="sharp.html">Sharp</a><a class="current" href="toshiba.html">Toshiba</a><a href="telefunken-medion.html">Telefunken, Medion &amp; Co.</a><a href="loewe.html">Loewe</a><a href="receiver.html">Receiver &amp; PC</a></nav>
+    </section>
+    <p class="disclaimer">Alle Angaben ohne Gewähr. Mache vor dem Zurückspielen eine Sicherung der Originaldatei.</p>
+  </main>
+
+  <footer class="site-footer">
+    Basiert auf <a href="https://github.com/PredatH0r/ChanSort" target="_blank" rel="noopener">ChanSort</a> von Horst Beham ·
+    Lizenz GPLv3 · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>
