@@ -1,0 +1,10 @@
+   # ChanSort wird separat geklont (siehe README)
+   chansort/
+
+   # Build-Ausgaben
+   bin/
+   obj/
+   *.user
+   .vs/
+   .idea/
+   __pycache__/
